@@ -6,21 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/vendor/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/vendor/glightbox/css/glightbox.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/vendor/aos/aos.css') ?>" rel="stylesheet">
+
+    <link href="<?php echo base_url('assets/css/main.css') ?>" rel="stylesheet">
+
 </head>
 <body>
-    <style>
-        html, body{
-            background-color: #222222;
-            color: #c7c7c7;
-        }
-    </style>
 
-    <?php echo $this->renderSection('header') ?>
-    <?php echo $this->renderSection('nav') ?>
-    <?php echo $this->renderSection('content') ?>
-    <?php echo $this->renderSection('footer') ?>
+    <?= $this->include('partials/header') ?>
+    <?= $this->include('partials/nav') ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <main class="text-danger">
+        <?= $this->renderSection('content') ?>
+    </main>
+
+    <?= $this->include('partials/footer') ?>
+
+
 </body>
 </html>
